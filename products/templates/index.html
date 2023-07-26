@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Products
+{%endblock%}
+
+{% block content %}
+<h1  class="text-center " style="color: blue">Our Products</h1>
+<hr>
+<div class="container ">
+    <div class="row">
+    
+{% for d in products %}
+
+<div class="col-md-3">
+  <div class="card " style="width: 18rem;">
+    <img class="card-img-top" src="" alt="">
+    <div class="card-body">
+      <h5 class="card-title">{{d.name}}</h5>
+      <p class="card-text">{{d.price}}</p>
+      <h6>{{d.stock}}</h6>
+    </div>
+  </div>  
+
+</div>
+    
+
+
+
+{% endfor %}
+</div>
+</div>
+{%endblock%}
